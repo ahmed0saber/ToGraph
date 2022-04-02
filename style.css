@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body{
+    padding: 0 0 20px 0;
+}
+#myPlot{
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+}
+.slope-info{
+    font-size: 22px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px;
+    display: none;
+}
+.form{
+    width: 96%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 10px auto;
+}
+.text-inputs input{
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding: 6px;
+    font-size: 16px;
+}
+.number-inputs input{
+    width: calc(50% - 24px);
+    margin: 10px;
+    padding: 6px;
+    font-size: 16px;
+}
+.form button{
+    margin: 10px;
+    padding: 8px 24px;
+    font-size: 16px;
+    border: 2px solid #08080833;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.form .btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.form .btns button:nth-of-type(1){
+    background-color: #2b2bb2;
+    color: #f7f7f7;
+}
+.form .btns button:nth-of-type(2){
+    background-color: #2bb22b;
+    color: #f7f7f7;
+}
+.form .btns button:nth-of-type(3){
+    background-color: #b22b2b;
+    color: #f7f7f7;
+}
+.records{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.records p{
+    font-size: 22px;
+    margin: 4px;
+}

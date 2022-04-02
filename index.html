@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToGraph</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="form">
+        <div class="text-inputs">
+            <input type="text" placeholder="Title" id="title"/>
+            <input type="text" placeholder="X-axis" id="xAxis"/>
+            <input type="text" placeholder="Y-axis" id="yAxis"/>
+        </div>
+        <div class="records">
+            
+        </div>
+        <div class="number-inputs">
+            <input type="number" placeholder="X" id="xValue"/>
+            <input type="number" placeholder="Y" id="yValue"/>
+        </div>
+        <div class="btns">
+            <button onclick="addPoint()">Add Point</button>
+            <button onclick="drawGraph()">Draw Graph</button>
+            <!-- <button>Reset</button> -->
+        </div>
+    </div>
+    
+    <div id="myPlot"></div>
+    <p class="slope-info">Slope = <span id="slope"></span></p>
+</body>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="./script.js"></script>
+</html>
