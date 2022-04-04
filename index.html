@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToGraph</title>
     <link rel="stylesheet" href="./style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet"></head>
 <body>
     <div class="form">
+        <h1>ToGraph</h1>
         <div class="text-inputs">
             <input type="text" placeholder="Title" id="title"/>
             <input type="text" placeholder="X-axis" id="xAxis"/>
             <input type="text" placeholder="Y-axis" id="yAxis"/>
         </div>
-        <div class="records">
-            
-        </div>
+        <div class="records"></div>
         <div class="number-inputs">
             <input type="number" placeholder="X" id="xValue"/>
             <input type="number" placeholder="Y" id="yValue"/>
@@ -24,7 +25,7 @@
         <div class="btns">
             <button onclick="addPoint()">Add Point</button>
             <button onclick="drawGraph()">Draw Graph</button>
-            <!-- <button>Reset</button> -->
+            <button onclick="dataReset()">Reset</button>
         </div>
     </div>
     

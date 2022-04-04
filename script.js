@@ -2,6 +2,17 @@ var xArray = []
 var yArray = []
 
 function addPoint(){
+    // Validation
+    if(document.getElementById("xValue").value == ""){
+        alert("Please enter the x value of this point")
+        document.getElementById("xValue").focus()
+        return
+    }else if(document.getElementById("yValue").value == ""){
+        alert("Please enter the y value of this point")
+        document.getElementById("yValue").focus()
+        return
+    }
+
     // Get point at x
     var pointX = document.getElementById("xValue").value
     xArray.push(parseInt(pointX))
@@ -18,8 +29,26 @@ function addPoint(){
     `
 }
 
-
 function drawGraph(){
+    // Validation
+    if(document.getElementById("title").value == ""){
+        alert("Please enter a title")
+        document.getElementById("title").focus()
+        return
+    }else if(document.getElementById("xAxis").value == ""){
+        alert("Please enter a property for the x axis")
+        document.getElementById("xAxis").focus()
+        return
+    }else if(document.getElementById("yAxis").value == ""){
+        alert("Please enter a property for the y axis")
+        document.getElementById("yAxis").focus()
+        return
+    }else if(xArray.length == 0 || yArray.length == 0){
+        alert("Please add one point at least")
+        document.getElementById("xValue").focus()
+        return
+    }
+
     // Calculate Sums
     var xSum=0, ySum=0, xxSum=0, xySum=0
     var count = xArray.length
@@ -60,6 +89,20 @@ function drawGraph(){
 
     // Draw the graphs using plotly and display slope
     Plotly.newPlot("myPlot", data, layout)
+    document.getElementById("myPlot").style.display = "block"
     document.getElementById("slope").textContent = slope.toFixed(4)
     document.getElementsByClassName("slope-info")[0].style.display = "block"
+}
+
+function dataReset(){
+    document.getElementsByClassName("slope-info")[0].style.display = "none"
+    document.getElementById("myPlot").style.display = "none"
+    document.getElementById("title").value = ""
+    document.getElementById("xAxis").value = ""
+    document.getElementById("yAxis").value = ""
+    document.getElementById("xValue").value = ""
+    document.getElementById("yValue").value = ""
+    xArray = []
+    yArray = []
+    document.getElementsByClassName("records")[0].innerHTML = `<div class="records"></div>`
 }
